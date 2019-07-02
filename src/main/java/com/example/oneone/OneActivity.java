@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+
+/* 로그인 성공 후 oneactivity.xml에서 적용되는 OneActivity.java
+* */
 public class OneActivity extends AppCompatActivity {
     Button btn_assignment,btn_diary,btn_wifi;
 

@@ -10,7 +10,9 @@ import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+/*
+문제풀이에 해당하는 클래스
+setContentView(R.layout.solve_a_question);*/
 
 public class SolveActivity extends AppCompatActivity {
 
@@ -28,7 +30,7 @@ public class SolveActivity extends AppCompatActivity {
 
         Intent intent = getIntent();
 
-        //한정원 : AssignmentActivity.java에서 가져온 것들
+        //hjw : AssignmentActivity.java에서 가져옴
         String protitle = intent.getStringExtra("title");
         String proindex = intent.getStringExtra("Pindex");
         String prosolveIt = intent.getStringExtra("solveIt");
@@ -60,9 +62,9 @@ public class SolveActivity extends AppCompatActivity {
                 "(4) "+proselectAnswer[3]+"\n\n"+
                 "(5) "+proselectAnswer[4]+"\n\n");
 
-        //solveResult_tv.setText(proanswer+"입니다.");
 
 
+        //hjw : radiobutton을 체크할 때 마다 답을 알 수 있다.
         rdobtn_one.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,6 +136,8 @@ public class SolveActivity extends AppCompatActivity {
             }
         });
 
+
+        // hjw : 문제를 기록할 수 있는 다이어리로 이동
         gotoDiarybtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

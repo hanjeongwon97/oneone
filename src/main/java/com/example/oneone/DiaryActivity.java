@@ -9,10 +9,12 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.TextView;
-
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+
+/*학습내용을 기록할 수 있는 클래스
+* setContentView(R.layout.diary_main);*/
 
 public class DiaryActivity extends AppCompatActivity {
     DatePicker datePicker;
@@ -59,6 +61,7 @@ public class DiaryActivity extends AppCompatActivity {
                     tvmonth.setText(month);
                     tvday.setText(day);
                     String fileName = "oneone_"+year + "_" + month + "_" + day + ".txt";
+                    //hjw : 위와 같은 fileName으로 앱내에 .txt.파일을 생성하여 저장한다.
                     FileOutputStream outFs = openFileOutput(fileName,
                             Context.MODE_PRIVATE);
                     String msg = edtDiary.getText().toString();
